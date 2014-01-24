@@ -1,0 +1,28 @@
+{
+  "name": "form5-alignment",
+  "version": "0.0.1",
+  "homepage": "http://form5.github.io/form5-alignment",
+  "description": "A collection of alignment helper functions dependent on jQuery",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Form5/form5-alignment.git"
+  },
+  "authors": [
+    "Benedikt D Valdez <benedikt@form5.is>",
+    "Olafur Nielsen <olafur@form5.is>",
+    "Arni Reynir Oskarsson <arni@form5.is>"
+  ],
+  "keywords": [
+    "form5",
+    "jquery",
+    "alignment",
+    "vertical",
+    "vertical center",
+    "equalize",
+    "window height"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules"
+  ]
+}
