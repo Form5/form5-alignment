@@ -17,8 +17,24 @@ module.exports = function(grunt) {
           'dist/form5-alignment.min.js': 'src/form5-alignment.js'
         }
       }
+    },
+    jshint: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: ['*.js'],
+            dest: 'dist/'
+          }
+        ],
+        options: {
+          jshintrc: '.jshintrc' // Read hinting options from .jshintrc
+        }
+      }
     }
   });
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  return grunt.registerTask('build', ['uglify']);
+  return grunt.registerTask('build', ['jshint','uglify']);
 };
