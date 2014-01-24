@@ -1,0 +1,27 @@
+{
+  "name": "form5-alignment",
+  "version": "0.0.1",
+  "description": "A collection of alignment helper functions dependent on jQuery",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Form5/form5-alignment.git"
+  },
+  "author": {
+    "name": "Form5",
+    "email": "hello@form5.is",
+    "url": "http://www.form5.is"
+  },
+  "contributors": [
+    "Benedikt D Valdez <benedikt@form5.is>",
+    "Olafur Nielsen <olafur@form5.is>",
+    "Arni Reynir Oskarsson <arni@form5.is>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Form5/form5-alignment/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.3.2"
+  }
+}
