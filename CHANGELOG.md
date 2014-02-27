@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.4 - 2014-02-27
+- Add minified file to bower.json 'main'
+
 ## v1.1.3 - 2014-02-27
 - Square: create options for adding and subtracting a fixed number of pixels from the original value
 
