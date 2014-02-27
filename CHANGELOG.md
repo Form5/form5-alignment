@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.5 - 2014-02-27
+- Fix syntax error in bower.json
+
 ## v1.1.4 - 2014-02-27
 - Add minified file to bower.json 'main'
 
