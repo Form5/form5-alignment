@@ -33,7 +33,7 @@
       $('[' + attribute + ']').each($.proxy(function(index,element){
         var $element = $(element),
             options = $element.data('options'),
-            newHeight = $element.width();
+            newHeight = $element.outerWidth();
 
         if (typeof options === 'undefined') {
           $element.data('options',this.parceOptions($element.attr(attribute)));
@@ -42,7 +42,7 @@
         }
 
         if (this.debug) {
-          console.log('equalize => element,options',element,options);
+          console.log('square => element,options',element,options);
         }
 
         $element.css('height','');
