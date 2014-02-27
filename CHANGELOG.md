@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.6 - 2014-02-27
+- Implement custom event triggers with data
+
 ## v1.1.5 - 2014-02-27
 - Fix syntax error in bower.json
 
