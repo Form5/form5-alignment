@@ -11,7 +11,7 @@
   <body>
 
     <div class="container clearfix">
-      <h1>form5-alignment <small>v1.0.0</small></h1>
+      <h1>form5-alignment <small>v1.1.0</small></h1>
 
       <p>
         form5-alignment is a collection of alignment helper functions dependent on jQuery. Only <strong>3KB</strong> of minified Javascript.
@@ -50,7 +50,7 @@
       </p>
 
       <p>
-        All options (as of v1.0) only take integers as a value, and are of course optional. Desired options should be included within the attribute as <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, like so e.g.
+        All options (as of v1.1) only take integers as a value, and are of course optional. Desired options should be included within the attribute as <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, like so e.g.
       </p>
 
       <p>
@@ -104,6 +104,15 @@
 
       <hr>
 
+      <h4>[square] <code>&lt;div square&gt;...&lt;/div&gt;</code></h4>
+      <p>Will set the height equal to elements width. The value can be proportionally modified by the multiply option, e.g. `multiply: 0.5` will return half of the element.height().</p>
+      <p>
+        Available options:
+        <code>{above: integer, below: integer, multiply: integer}</code>
+      </p>
+
+      <hr>
+
       <h3>What about debugging?</h3>
 
       <p>
@@ -142,6 +151,9 @@
               <div class="clearfix" vertical-center="{above: 568, below: 1023}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae sit rerum unde laboriosam voluptatum veritatis.</p>
               </div>
+            </div>
+            <div equalize>
+              <div class="clearfix" square="{above: 568, below: 1023, multiply: 0.5}" style="width:50%;background:red;">square</div>
             </div>
           </div>
         </div>
@@ -182,7 +194,7 @@
 
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="form5-alignment.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../src/form5-alignment.js"></script>
   </body>
 </html>

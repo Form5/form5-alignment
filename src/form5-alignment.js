@@ -5,6 +5,7 @@
     $window: $(window),
     debug: false,
 
+    runSquare: false,
     runEqualize: false,
     runVerticalCenter: false,
     runFullWindowHeight: false,
@@ -25,10 +26,46 @@
       'bottom': '',
       'height': ''
     },
+    square: function(attribute) {
+      this.runSquare = attribute;
+      var windowWidth = window.innerWidth || this.$window.width();
+
+      $('[' + attribute + ']').each($.proxy(function(index,element){
+        var $element = $(element),
+            options = $element.data('options'),
+            newHeight = $element.width();
+
+        if (typeof options === 'undefined') {
+          $element.data('options',this.parceOptions($element.attr(attribute)));
+          options = $element.data('options');
+          $element.attr(attribute,'');
+        }
+
+        if (this.debug) {
+          console.log('equalize => element,options',element,options);
+        }
+
+        $element.css('height','');
+
+        if (typeof options['above'] === 'number' && windowWidth < options['above']) {
+          return;
+        }
+
+        if (typeof options['below'] === 'number' && windowWidth > options['below']) {
+          return;
+        }
+
+        if (typeof options['multiply'] === 'number') {
+          newHeight = (isNaN(options['multiply']) ? 1 : options['multiply']) * newHeight;
+        }
+
+        $element.css('height',newHeight);
+
+      },this));
+    },
     verticalCenter: function(attribute) {
       this.runVerticalCenter = attribute;
       var windowWidth = window.innerWidth || this.$window.width();
-
 
       $('[' + attribute + ']').each($.proxy(function(index,element){
         var $element = $(element),
@@ -167,6 +204,7 @@
     window.form5.alignment.fullWindowHeight('full-window-height');
     window.form5.alignment.equalize('equalize-wrap');
     window.form5.alignment.verticalCenter('vertical-center');
+    window.form5.alignment.square('square');
   });
 
   $(window).on('resize',function(){

@@ -38,7 +38,7 @@ to, like so e.g.
 <div vertical-center>...</div>
 ```
 
-All options (as of v1.0) only take integers as a value, and are of course optional. Desired options should be included within the attribute as [JSON](http://en.wikipedia.org/wiki/JSON), like so e.g.
+All options (as of v1.1) only take integers as a value, and are of course optional. Desired options should be included within the attribute as [JSON](http://en.wikipedia.org/wiki/JSON), like so e.g.
 
 ```html
 <div vertical-center="{above: 568, below: 1023}">...</div>
@@ -104,6 +104,21 @@ equalize-wrap, this function should affect.
 Will center the element vertically within it's parent.
 
 Available options: `{above: integer, below: integer}`
+
+---
+
+
+#### [square]
+
+```html
+<div square>...</div>
+```
+
+Will set the height equal to elements width. The value can be
+proportionally modified by the multiply option, e.g. `multiply: 0.5` will
+return half of the element.height().
+
+Available options: `{above: integer, below: integer, multiply: integer}`
 
 ---
 
