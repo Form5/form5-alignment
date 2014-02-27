@@ -69,7 +69,7 @@
 
         $element.css('height',newHeight);
 
-        $(document).trigger('full-window-height',{element: element, options: options, newHeight: newHeight});
+        $(document).trigger('square',{type: 'square', element: element, options: options, newHeight: newHeight});
 
       },this));
     },
@@ -111,7 +111,7 @@
 
         $element.css(this.verticalAbsolute).css('height',newHeight);
 
-        $(document).trigger('vertical-center',{element: element, options: options, newHeight: newHeight});
+        $(document).trigger('vertical-center',{type: 'vertical-center', element: element, options: options, newHeight: newHeight});
 
       },this));
     },
@@ -152,7 +152,7 @@
 
         $element.css(property,windowHeight);
 
-        $(document).trigger('full-window-height',{element: element, options: options, windowHeight: windowHeight});
+        $(document).trigger('full-window-height',{type: 'full-window-height', element: element, options: options, windowHeight: windowHeight});
 
       },this));
     },
@@ -192,7 +192,7 @@
         var newHeight = this.equalizeMax($columns);
         $columns.css('height',newHeight);
 
-        $(document).trigger('equalize',{element: element, columns: $columns, options: options, equalizeMax: newHeight});
+        $(document).trigger('equalize',{type: 'equalize', element: element, columns: $columns, options: options, equalizeMax: newHeight});
 
       },this));
     },

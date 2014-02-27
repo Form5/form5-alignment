@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.7 - 2014-02-27
+- Fix name of custom event on square. Also, add 'type' to data object
+
 ## v1.1.6 - 2014-02-27
 - Implement custom event triggers with data
 
