@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.3 - 2014-02-27
+- Square: create options for adding and subtracting a fixed number of pixels from the original value
+
 ## v1.1.2 - 2014-02-27
 - Square: get elements outerWidth instead of width (to include padding)
 

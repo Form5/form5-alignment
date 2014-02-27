@@ -59,6 +59,14 @@
           newHeight = (isNaN(options['multiply']) ? 1 : options['multiply']) * newHeight;
         }
 
+        if (typeof options['subtract'] === 'number') {
+          newHeight = newHeight - (isNaN(options['subtract']) ? 0 : options['subtract']);
+        }
+
+        if (typeof options['add'] === 'number') {
+          newHeight = newHeight + (isNaN(options['add']) ? 0 : options['add']);
+        }
+
         $element.css('height',newHeight);
 
       },this));

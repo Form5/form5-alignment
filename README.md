@@ -116,9 +116,9 @@ Available options: `{above: integer, below: integer}`
 
 Will set the height equal to elements width. The value can be
 proportionally modified by the multiply option, e.g. `multiply: 0.5` will
-return half of the element.height().
+return half of the element.height(). One can add or subtract from the value by using 'subtract:123' and 'add:123' accordingly.
 
-Available options: `{above: integer, below: integer, multiply: integer}`
+Available options: `{above: integer, below: integer, multiply: integer, subtract: integer, add: integer}`
 
 ---
 
