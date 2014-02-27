@@ -69,6 +69,8 @@
 
         $element.css('height',newHeight);
 
+        $(document).trigger('full-window-height',{element: element, options: options, newHeight: newHeight});
+
       },this));
     },
     verticalCenter: function(attribute) {
@@ -79,7 +81,7 @@
         var $element = $(element),
             $parent = $element.parent(),
             options = $element.data('options'),
-            height = 0;
+            newHeight = 0;
 
         if (typeof options === 'undefined') {
           $element.data('options',this.parceOptions($element.attr(attribute)));
@@ -105,9 +107,11 @@
           $parent.css('position', 'relative');
         }
 
-        height = $element.outerHeight();
+        newHeight = $element.outerHeight();
 
-        $element.css(this.verticalAbsolute).css('height',height);
+        $element.css(this.verticalAbsolute).css('height',newHeight);
+
+        $(document).trigger('vertical-center',{element: element, options: options, newHeight: newHeight});
 
       },this));
     },
@@ -148,6 +152,8 @@
 
         $element.css(property,windowHeight);
 
+        $(document).trigger('full-window-height',{element: element, options: options, windowHeight: windowHeight});
+
       },this));
     },
     equalize: function(attribute) {
@@ -183,7 +189,10 @@
           return;
         }
 
-        $columns.css('height',this.equalizeMax($columns));
+        var newHeight = this.equalizeMax($columns);
+        $columns.css('height',newHeight);
+
+        $(document).trigger('equalize',{element: element, columns: $columns, options: options, equalizeMax: newHeight});
 
       },this));
     },
