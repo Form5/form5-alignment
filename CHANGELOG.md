@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.1 - 2014-02-27
+- Add force option to fullWindowHeight to use height instead of min-height
+
 ## v1.1.0 - 2014-02-27
 - Create square function that sets height to width (with options)
 

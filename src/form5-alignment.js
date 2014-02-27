@@ -122,7 +122,9 @@
           console.log('fullWindowHeight => element,options',element,options);
         }
 
-        $element.css('min-height','');
+        var property = typeof options['force'] !== 'undefined' ? 'height' : 'min-height';
+
+        $element.css(property,'');
 
         if (typeof options['above'] === 'number' && windowWidth < options['above']) {
           return;
@@ -136,7 +138,7 @@
           windowHeight = (isNaN(options['multiply']) ? 1 : options['multiply']) * windowHeight;
         }
 
-        $element.css('min-height',windowHeight);
+        $element.css(property,windowHeight);
 
       },this));
     },
