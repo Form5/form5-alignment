@@ -1,20 +1,14 @@
 {
   "predef": [
-    "document",
-    "window",
-    "location",
-    "setTimeout",
-    "$",
-    "console",
-    "module"
+    "Event"
   ],
-  "node" : false,
+  "node" : true,
   "jquery" : true,
   "browser" : true,
   "boss" : true,
   "curly": false,
   "debug": false,
-  "devel": false,
+  "devel": true,
   "eqeqeq": true,
   "evil": true,
   "forin": false,
