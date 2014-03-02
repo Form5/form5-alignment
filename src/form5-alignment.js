@@ -122,7 +122,8 @@
 
       $('[' + attribute + ']').each($.proxy(function(index,element){
         var $element = $(element),
-            options = $element.data('options');
+            options = $element.data('options'),
+            newHeight = windowHeight;
 
         if (typeof options === 'undefined') {
           $element.data('options',this.parceOptions($element.attr(attribute)));
@@ -147,12 +148,12 @@
         }
 
         if (typeof options['multiply'] === 'number') {
-          windowHeight = (isNaN(options['multiply']) ? 1 : options['multiply']) * windowHeight;
+          newHeight = (isNaN(options['multiply']) ? 1 : options['multiply']) * newHeight;
         }
 
-        $element.css(property,windowHeight);
+        $element.css(property,newHeight);
 
-        $(document).trigger('full-window-height',{type: 'full-window-height', element: element, options: options, windowHeight: windowHeight});
+        $(document).trigger('full-window-height',{type: 'full-window-height', element: element, options: options, newHeight: newHeight});
 
       },this));
     },

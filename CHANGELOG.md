@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.8 - 2014-03-02
+- full-window-height: Make sure not to manipulate the actual windowHeight variable, since it affects all following elements.
+
 ## v1.1.7 - 2014-02-27
 - Fix name of custom event on square. Also, add 'type' to data object
 
