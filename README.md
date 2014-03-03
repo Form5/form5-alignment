@@ -58,11 +58,12 @@ and/or below a width predefined by yourself. (try out the
 <div full-window-height>...</div>
 ```
 
-Will set the min-height of the element to window.height(). The value can be
-proportionally modified by the multiply option, e.g. `multiply: 0.5` will
-return half of the window.height().
+Will set the min-height (or optionally height, if `force` option is used) of
+the element to window.height(). The value can be proportionally modified by
+the multiply option, e.g. `multiply: 0.5` will return half of the
+window.height().
 
-Available options: `{above: integer, below: integer, multiply: integer}`
+Available options: `{above: integer, below: integer, multiply: integer, force: boolean}`
 
 ---
 
@@ -103,7 +104,7 @@ equalize-wrap, this function should affect.
 
 Will center the element vertically within it's parent.
 
-Available options: `{above: integer, below: integer}`
+Available options: `{above: integer, below: integer, fixed: boolean}`
 
 ---
 

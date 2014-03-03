@@ -18,6 +18,14 @@
       'bottom': '0'
     },
 
+    verticalFixed: {
+      'margin-top': 'auto',
+      'margin-bottom': 'auto',
+      'position': 'fixed',
+      'top': '0',
+      'bottom': '0'
+    },
+
     verticalStatic: {
       'position': '',
       'margin-top': '',
@@ -81,6 +89,7 @@
         var $element = $(element),
             $parent = $element.parent(),
             options = $element.data('options'),
+            styles = this.verticalAbsolute,
             newHeight = 0;
 
         if (typeof options === 'undefined') {
@@ -94,6 +103,8 @@
         }
 
         $element.css(this.verticalStatic);
+
+        styles = typeof options['fixed'] !== 'undefined' ? this.verticalFixed : this.verticalAbsolute;
 
         if (typeof options['above'] === 'number' && windowWidth < options['above']) {
           return;
@@ -109,7 +120,7 @@
 
         newHeight = $element.outerHeight();
 
-        $element.css(this.verticalAbsolute).css('height',newHeight);
+        $element.css(styles).css('height',newHeight);
 
         $(document).trigger('vertical-center',{type: 'vertical-center', element: element, options: options, newHeight: newHeight});
 

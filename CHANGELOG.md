@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.9 - 2014-03-03
+- vertical-center: Create 'fixed' option.
+
 ## v1.1.8 - 2014-03-02
 - full-window-height: Make sure not to manipulate the actual windowHeight variable, since it affects all following elements.
 
